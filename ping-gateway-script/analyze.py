@@ -79,7 +79,7 @@ def analyze(dir, file):
             message = 'Ping unhappy'
 
             # Extract the 'x.y% packet loss' message
-            found = re.search('([0-9]+.[0-9]+% packet loss)',
+            found = re.search(r'([0-9]+.[0-9]+% packet loss)',
                               item['ping stdout'])
             if found:
                 message += f': {found.group(1)}'
